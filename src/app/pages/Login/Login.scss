@@ -37,6 +37,72 @@
     .login_form {
         display: flex;
         flex-direction: column;
+        justify-content: center;
         width: 37.4375rem;
+        padding: 0 2rem;
+
+        .logo {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .username_password {
+            color: var(--Grey, #a0a3bd);
+            text-align: center;
+            font-size: 1rem;
+            margin-bottom: 5rem;
+        }
+
+        .input_area {
+            display: flex;
+            flex-direction: column;
+
+            .email,
+            .password {
+                border: none;
+                border-bottom: 1px solid black;
+                border-radius: 0;
+                width: 31.09375rem;
+                margin: 1rem 0rem;
+                box-shadow: none;
+                text-shadow: 0 0 0 black;
+            }
+        }
+
+        .forgot_passwors {
+            font-size: 1rem;
+            color: var(--Grey, #a0a3bd);
+            text-align: center;
+            margin-right: 3rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: end;
+        }
+
+        .remember_me {
+            margin-top: 2rem;
+            font-size: 1rem;
+            color: var(--Grey, #a0a3bd);
+            text-align: center;
+            display: inline-flex;
+            align-items: center;
+            justify-content: start;
+            gap: 0.625rem;
+        }
+
+        .btn_submit {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 25rem;
+            height: 3.125rem;
+            background: var(--Primary, #9058ff);
+            padding: 0.625rem 1.625rem;
+            border-radius: 0.625rem;
+            margin: 10rem auto;
+        }
     }
 }
