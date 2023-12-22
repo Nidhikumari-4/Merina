@@ -1,5 +1,5 @@
 import React from "react";
-import "../Login/Login.scss";
+import "./Login.scss";
 import { Button } from "primereact/button";
 import { InputText } from "primereact/inputtext";
 import { Image } from "primereact/image";
@@ -23,7 +23,6 @@ const Login = () => {
       <div className="login_form">
         <div className="logo">
           <Image src="/logo.png" alt="Image" width="200" />
-
           <p className="username_password">Enter your username and password</p>
         </div>
         <span className="input_area">

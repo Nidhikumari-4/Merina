@@ -1,0 +1,12 @@
+.dashboard_page {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+
+    .dashboard_area {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background-color: #fafafa;
+    }
+}

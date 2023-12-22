@@ -1,0 +1,41 @@
+.side_bar {
+    display: flex;
+    flex-direction: column;
+    width: 18.5rem;
+    height: auto;
+    padding: 0rem 2rem;
+
+    .logo {
+        display: flex;
+        flex-direction: column;
+        padding-left: 1.5rem;
+        padding-top: 2rem;
+    }
+
+    .icons {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        gap: 1rem;
+        padding: 1rem 1rem;
+    }
+
+    .text_content {
+        color: var(--Black-50, #53545c);
+        text-align: center;
+        align-items: flex-start;
+        font-size: 0.875rem;
+        font-weight: 600;
+        letter-spacing: 0.05rem;
+    }
+
+    .support {
+        align-items: center;
+        display: flex;
+        padding: 0.6875rem 1rem;
+        gap: 1rem;
+        border-radius: 0.625rem;
+        background: #e8e9ff;
+        margin: 2rem 0;
+    }
+}
