@@ -1,8 +1,8 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import "./Dashboard.scss";
-import Navbar from "@/app/components/Navbar/Navbar";
-import SideBar from "@/app/components/SideBar/SideBar";
+import Navbar from "@/components/Navbar/Navbar";
+import SideBar from "@/components/SideBar/SideBar";
 import { Image } from "primereact/image";
 import { Chart } from "primereact/chart";
 import axios from "axios";
@@ -206,6 +206,33 @@ const Dashboard = () => {
     { country: "India", visit: "12300" },
   ];
 
+  const recentActivities = [
+    {
+      icon: <Image src="/notification-violet.svg" alt="" width="50" />,
+      time: "11:20",
+      user: "New User",
+      name: "Erik Pittman",
+      heading: "",
+      text: "You might remember the Dell computer commercials in which a youth reports this exciting news to his friends that they are about to get their new computer.",
+    },
+    {
+      icon: <Image src="/notification-violet.svg" alt="" width="50" />,
+      time: "11:20",
+      user: "New User",
+      name: "Erik Pittman",
+      heading: "Add New Post «Second Post»",
+      text: "You might remember the Dell computer commercials in which a youth reports this exciting news to his friends...",
+    },
+    {
+      icon: <Image src="/notification-violet.svg" alt="" width="50" />,
+      time: "11:20",
+      user: "New User",
+      name: "Erik Pittman",
+      heading: "Add New Post «Second Post»",
+      text: "You might remember the Dell computer commercials in which a youth reports this exciting news to his friends that they are about to get their new computer.",
+    },
+  ];
+
   return (
     <div className="dashboard_page">
       <SideBar />
@@ -383,6 +410,55 @@ const Dashboard = () => {
                 height={400}
                 width={500}
               />
+            </div>
+          </div>
+
+          {/* Chart sections 3 */}
+          <div className="chart_sec_three">
+            <div className="top_stories">
+              <h2>Top stories in last 30 days</h2>
+              <span className="table_headings">
+                <p className="latest">Latest Articles</p>
+                <p>Popular Articles</p>
+                <p>Tranding Articles</p>
+              </span>
+              <span className="data_table">
+                <DataTable value={formattedArticleData}>
+                  {articleColumns.map((column, index) => (
+                    <Column
+                      key={index}
+                      paginator
+                      field={column.field}
+                      header={column.header}
+                    />
+                  ))}
+                </DataTable>
+              </span>
+            </div>
+
+            <div className="recent_activities">
+              <span className="activities_heading">
+                <h2> Recent Activities</h2>
+                <p className="viewall">View All</p>
+              </span>
+              {recentActivities.map((activities, i) => (
+                <span className="activities_box">
+                  {activities.icon}
+                  <span className="activities">
+                    <span className="boxes">
+                      <p>{activities.time}</p>
+                      <p>{activities.user}</p>
+                      <p>{activities.name}</p>
+                    </span>
+                    <span>
+                      <h4>{activities.heading}</h4>
+                    </span>
+                    <span className="activities_box_text">
+                      <p>{activities.text}</p>
+                    </span>
+                  </span>
+                </span>
+              ))}
             </div>
           </div>
 

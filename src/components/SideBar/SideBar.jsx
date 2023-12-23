@@ -1,8 +1,11 @@
 import React from "react";
 import "./SideBar.scss";
 import { Image } from "primereact/image";
+import { usePathname } from "next/navigation";
 
 const SideBar = () => {
+  const pathname = usePathname();
+
   const SideBarItems = [
     {
       icon: <Image src="/home.svg" alt="Image" width="20" />,
@@ -57,9 +60,31 @@ const SideBar = () => {
         <Image src="/logo.png" alt="Image" width="110" />
       </span>
       {SideBarItems.map((items, index) => (
-        <span className="icons">
+        <span
+          key={index}
+          className="icons"
+          style={
+            items.label === "Dashboard"
+              ? {
+                  backgroundColor: "#7950F2",
+                  borderRadius: "0.75rem",
+                }
+              : {}
+          }
+        >
           <span>{items.icon}</span>
-          <p className="text_content">{items.label} </p>
+          <p
+            className="text_content"
+            style={
+              items.label === "Dashboard"
+                ? {
+                    color: "white",
+                  }
+                : {}
+            }
+          >
+            {items.label}{" "}
+          </p>
         </span>
       ))}
       <span className="support">

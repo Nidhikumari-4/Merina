@@ -190,6 +190,105 @@
                 }
             }
 
+            .chart_sec_three {
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                padding: 1rem;
+                gap: 1rem;
+
+                .top_stories {
+                    border-radius: 0.625rem;
+                    background-color: #fff;
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    padding: 2rem;
+                    gap: 2rem;
+
+                    .table_headings {
+                        display: flex;
+                        justify-content: space-around;
+                        align-items: center;
+                        width: 55.6875rem;
+                        height: 3.0625rem;
+                        flex-shrink: 0;
+                        border-radius: 0.625rem;
+                        background: #e8e9ff;
+
+                        p {
+                            color: var(--Text, #030229);
+                            font-size: 1.0625rem;
+                            font-weight: 600;
+                            opacity: 0.7;
+                        }
+
+                        .latest {
+                            text-decoration-line: underline;
+                            text-decoration-color: #7950f2;
+                            text-decoration-thickness: 2px;
+                        }
+                    }
+                }
+
+                .recent_activities {
+                    border-radius: 0.625rem;
+                    background-color: #fff;
+                    display: flex;
+                    flex-direction: column;
+                    padding: 2rem;
+                    gap: 2rem;
+
+                    .activities_heading {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                    }
+
+                    .activities_box {
+                        display: flex;
+                        flex-direction: row;
+                        gap: 2rem;
+
+                        .activities {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 0.75rem;
+                            color: var(--Grey, #a0a3bd);
+
+                            .boxes {
+                                display: flex;
+                                flex-direction: row;
+                                gap: 2rem;
+                                align-items: center;
+                                font-weight: 600;
+                                letter-spacing: 0.06rem;
+
+                                p {
+                                    font-size: 0.735rem;
+                                    background: #fafafa;
+                                    padding: 0.4125rem 0.9375rem;
+                                    border-radius: 0.9375rem;
+                                }
+                            }
+                            h4 {
+                                color: #636363;
+                                font-size: 0.95rem;
+                                font-style: normal;
+                                font-weight: 700;
+                                line-height: 1.25rem;
+                            }
+
+                            .activities_box_text {
+                                font-size: 0.85rem;
+                                font-weight: 200;
+                                line-height: 1rem;
+                            }
+                        }
+                    }
+                }
+            }
+
             .chart_sec_four {
                 display: flex;
                 justify-content: start;
@@ -216,13 +315,6 @@
                         justify-content: space-between;
                         align-items: center;
                         margin-bottom: 1rem;
-
-                        .viewall {
-                            color: #7950f2;
-                            font-size: 1.0625rem;
-                            font-weight: 600;
-                            text-decoration-line: underline;
-                        }
                     }
 
                     .users_box {
@@ -251,6 +343,7 @@
                         }
                     }
                 }
+
                 .location_country {
                     display: flex;
                     flex-direction: row;
@@ -275,6 +368,13 @@
                         justify-content: flex-start;
                     }
                 }
+            }
+
+            .viewall {
+                color: #7950f2;
+                font-size: 1.0625rem;
+                font-weight: 600;
+                text-decoration-line: underline;
             }
         }
     }
