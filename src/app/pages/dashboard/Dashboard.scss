@@ -189,6 +189,93 @@
                     }
                 }
             }
+
+            .chart_sec_four {
+                display: flex;
+                justify-content: start;
+                width: 100%;
+                padding: 1rem 0;
+                gap: 1rem;
+
+                .location_country,
+                .top_users {
+                    border-radius: 0.625rem;
+                    padding: 1.75rem;
+                    background: #fff;
+                }
+
+                .top_users {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    background-color: #e8e9ff;
+                    gap: 2rem;
+
+                    .user_heading {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        margin-bottom: 1rem;
+
+                        .viewall {
+                            color: #7950f2;
+                            font-size: 1.0625rem;
+                            font-weight: 600;
+                            text-decoration-line: underline;
+                        }
+                    }
+
+                    .users_box {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: center;
+                        gap: 7rem;
+
+                        .users {
+                            display: flex;
+                            align-items: center;
+                            gap: 0.75rem;
+
+                            .name_title {
+                                display: flex;
+                                flex-direction: column;
+                                gap: 0.25rem;
+
+                                .title {
+                                    color: var(--Grey, #a0a3bd);
+                                    font-size: 0.875rem;
+                                    font-weight: 400;
+                                }
+                            }
+                        }
+                    }
+                }
+                .location_country {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 5rem;
+
+                    .location {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 3rem;
+                    }
+
+                    .country {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        gap: 1rem;
+                        display: flex;
+                        justify-content: flex-start;
+                    }
+                }
+            }
         }
     }
 }

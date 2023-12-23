@@ -7,6 +7,8 @@ import { Image } from "primereact/image";
 import { Chart } from "primereact/chart";
 import axios from "axios";
 import { parse, format } from "date-fns";
+import { DataTable } from "primereact/datatable";
+import { Column } from "primereact/column";
 
 const Dashboard = () => {
   const [apiData, setApiData] = useState(null);
@@ -149,6 +151,60 @@ const Dashboard = () => {
       },
     },
   };
+
+  const articleColumns = [
+    { field: "title", header: "Title" },
+    { field: "slug", header: "Slug" },
+    { field: "storyviews", header: "Story Views" },
+    { field: "paywallclicks", header: "Paywall Clicks" },
+    { field: "purchase", header: "Purchase Amount" },
+  ];
+
+  const formattedArticleData = apiData?.ArticleTable?.slice(0, 4).map(
+    (article) => ({
+      title: article.Title,
+      slug: article.slug,
+      storyviews: article.StoryViews,
+      paywallclicks: article.PaywallClicks,
+      purchase: article.PurchaseAmount,
+    })
+  );
+
+  const topUsers = [
+    {
+      image: <Image src="/topUser-one.png" alt="" width="60" />,
+      name: "Harry Joe",
+      title: "3 Article Purchased | 3 saved ",
+      icon: <Image src="/message.svg" alt="" width="40" />,
+    },
+    {
+      image: <Image src="/topUser-two.png" alt="" width="60" />,
+      name: "Harry Joe",
+      title: "3 Article Purchased | 3 saved ",
+      icon: <Image src="/message.svg" alt="" width="40" />,
+    },
+    {
+      image: <Image src="/topUser-three.png" alt="" width="60" />,
+      name: "Harry Joe",
+      title: "4 Article Purchased | 3 saved ",
+      icon: <Image src="/message.svg" alt="" width="40" />,
+    },
+    {
+      image: <Image src="/topUser-four.png" alt="" width="60" />,
+      name: "Harry Joe",
+      title: "4 Article Purchased | 3 saved ",
+      icon: <Image src="/message.svg" alt="" width="40" />,
+    },
+  ];
+
+  const countryData = [
+    { country: "United Stats", visit: "13456" },
+    { country: "Brazil", visit: "2345" },
+    { country: "Russia", visit: "8300" },
+    { country: "France", visit: "45678" },
+    { country: "Canada", visit: "3421" },
+    { country: "India", visit: "12300" },
+  ];
 
   return (
     <div className="dashboard_page">
@@ -330,11 +386,50 @@ const Dashboard = () => {
             </div>
           </div>
 
-          {/* Chart sections 3 */}
-
           {/* Chart sections 4 */}
+          <div className="chart_sec_four">
+            <div className="top_users">
+              <span className="user_heading">
+                <h2>Top user in last 30 days</h2>
+                <p className="viewall">View All</p>
+              </span>
+              {topUsers.map((user, i) => (
+                <div className="users_box">
+                  <span className="users">
+                    <span>{user.image}</span>
+                    <span className="name_title">
+                      <h4>{user.name}</h4>
+                      <p className="title">{user.title}</p>
+                    </span>
+                  </span>
+                  <span>{user.icon}</span>
+                </div>
+              ))}
+            </div>
 
-          {/* Chart sections 5 */}
+            <div className="location_country">
+              <div className="location">
+                <h2>User by Location</h2>
+                <Image src="/world_map.png" alt="" width="500" />
+              </div>
+              <div className="country">
+                <h2 className="heading_country">Top 10 country</h2>
+                <span>
+                  <DataTable
+                    tableStyle={{
+                      minWidth: "30rem",
+                      maxHeight: "20rem",
+                      overflow: "auto",
+                    }}
+                    value={countryData}
+                  >
+                    <Column field="country" header="Country" />
+                    <Column field="visit" header="Visits" />
+                  </DataTable>
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
