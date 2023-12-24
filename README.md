@@ -4,7 +4,7 @@
 
 ## Links
 
-Github link: https://github.com/Nidhikumari-4/Merina
+Github link: https://github.com/Nidhikumari-4/Merina \
 Hosted URL: https://merina-dair.vercel.app/
 
 ## Tools and Technologies:
