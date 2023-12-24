@@ -5,7 +5,7 @@ import { InputText } from "primereact/inputtext";
 import { Image } from "primereact/image";
 import { Checkbox } from "primereact/checkbox";
 
-const Login = () => {
+const LoginPage = () => {
   return (
     <div className="login_page">
       <div className="welcome">
@@ -53,4 +53,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default LoginPage;

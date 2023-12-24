@@ -10,7 +10,7 @@ import { parse, format } from "date-fns";
 import { DataTable } from "primereact/datatable";
 import { Column } from "primereact/column";
 
-const Dashboard = () => {
+const DashboardPage = () => {
   const [apiData, setApiData] = useState(null);
 
   const fetchData = async () => {
@@ -29,7 +29,7 @@ const Dashboard = () => {
   }, []);
 
   if (!apiData) {
-    return <div>Loading...</div>;
+    return;
   }
 
   const chartData = {
@@ -496,7 +496,7 @@ const Dashboard = () => {
                 <Image src="/world_map.png" alt="" width="500" />
               </div>
               <div className="country">
-                <h2 className="heading_country">Top 10 country</h2>
+                <h2 className="heading_country">Top 10 countries</h2>
                 <span>
                   <DataTable
                     tableStyle={{
@@ -519,4 +519,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default DashboardPage;
