@@ -1,4 +1,5 @@
 "use client";
+
 import React, { useEffect, useState } from "react";
 import "./Dashboard.scss";
 import Navbar from "@/components/Navbar/Navbar";
@@ -29,7 +30,7 @@ const DashboardPage = () => {
   }, []);
 
   if (!apiData) {
-    return;
+    return <div className="loading-text-spinner"></div>;
   }
 
   const chartData = {

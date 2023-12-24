@@ -4,3 +4,20 @@
   margin: 0;
   font-family: "Urbanist", sans-serif;
 }
+
+.loading-text-spinner {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 3.5px solid;
+  border-color: #7950f2;
+  border-right-color: #fff;
+  margin: 4rem auto;
+  animation: spinner-d3wgkg 1s infinite linear;
+}
+
+@keyframes spinner-d3wgkg {
+  to {
+    transform: rotate(1turn);
+  }
+}
