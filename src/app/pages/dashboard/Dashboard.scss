@@ -1,6 +1,7 @@
 .dashboard_page {
     display: flex;
     flex-direction: row;
+    padding-left: 17rem;
 
     .dashboard_area {
         display: flex;
@@ -291,7 +292,7 @@
 
             .chart_sec_four {
                 display: flex;
-                justify-content: start;
+                justify-content: center;
                 width: 100%;
                 padding: 1rem 0;
                 gap: 1rem;

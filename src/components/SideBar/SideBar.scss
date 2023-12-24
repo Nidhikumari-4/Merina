@@ -1,15 +1,17 @@
 .side_bar {
     display: flex;
     flex-direction: column;
-    width: 18.5rem;
+    width: 16rem;
     height: auto;
-    padding: 0rem 2rem;
+    padding: 0rem 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
 
     .logo {
         display: flex;
         flex-direction: column;
-        padding-left: 1.5rem;
-        padding-top: 2rem;
+        padding: 1.55rem 3rem;
     }
 
     .icons {
@@ -23,8 +25,6 @@
 
     .text_content {
         color: var(--Black-50, #53545c);
-        text-align: center;
-        align-items: flex-start;
         font-size: 0.875rem;
         font-weight: 600;
         letter-spacing: 0.05rem;
@@ -34,9 +34,9 @@
         align-items: center;
         display: flex;
         padding: 0.6875rem 1rem;
-        gap: 1rem;
+        gap: 0.65rem;
         border-radius: 0.625rem;
         background: #e8e9ff;
-        margin: 2rem 0;
+        margin: 2.75rem 0;
     }
 }
