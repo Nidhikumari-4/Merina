@@ -1,6 +1,3 @@
-// import Dashboard from "./pages/dashboard/index";
-// import LoginPage from "@/app/login/page";
-
 import Link from "next/link";
 
 export default function Home() {
