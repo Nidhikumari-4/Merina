@@ -4,6 +4,7 @@
   "description": "merina-backend",
   "main": "index.js",
   "scripts": {
+    "build": "your-build-command-here",
     "start": "node index.js",
     "dev": "nodemon index.js"
   },
