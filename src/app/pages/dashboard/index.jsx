@@ -348,7 +348,7 @@ const Dashboard = () => {
                   <p className="revenue_text">Revenue</p>
                   <p className="total">${apiData?.Micro_Payment?.Total}K</p>
                 </span>
-                <span>
+                <span className="icon_part">
                   <Image src={"/seen.svg"} alt="" width="50" />
                 </span>
               </div>

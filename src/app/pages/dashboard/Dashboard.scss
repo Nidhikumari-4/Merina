@@ -8,7 +8,7 @@
         flex-direction: column;
         width: 100%;
         background-color: #fafafa;
-        padding: 0 1.5rem;
+        padding: 0 2.5rem;
 
         .dashboard {
             display: flex;
@@ -87,12 +87,11 @@
                 display: flex;
                 width: 100%;
                 padding: 1rem 0rem;
-                justify-content: center;
-                gap: 2rem;
+                gap: 1rem;
 
                 .analytics {
                     border-radius: 0.625rem;
-                    padding: 1rem 2rem;
+                    padding: 1rem;
                     background: #fff;
 
                     .analytics_numbers {
@@ -119,7 +118,7 @@
                 .revenue {
                     border-radius: 0.625rem;
                     background: #fff;
-                    padding: 1rem 2rem;
+                    padding: 1rem;
 
                     .revenue_chart_text {
                         display: flex;
@@ -153,6 +152,7 @@
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
+                padding: 0 1rem;
                 margin-bottom: 1rem;
             }
 
@@ -166,8 +166,11 @@
                 .subscriber,
                 .micropayments,
                 .yearly_subscriber {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
                     border-radius: 0.625rem;
-                    padding: 1rem;
+                    padding: 2rem 0.25rem;
                     background: #fff;
 
                     .icon_part {
