@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   env: {
-    SERVER_URL: "http://localhost:4000",
+    SERVER_URL: "https://merina.onrender.com",
   },
 };
 
