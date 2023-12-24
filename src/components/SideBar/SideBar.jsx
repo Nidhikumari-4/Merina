@@ -1,11 +1,8 @@
 import React from "react";
 import "./SideBar.scss";
 import { Image } from "primereact/image";
-import { usePathname } from "next/navigation";
 
 const SideBar = () => {
-  const pathname = usePathname();
-
   const SideBarItems = [
     {
       icon: <Image src="/home.svg" alt="Image" width="20" />,
