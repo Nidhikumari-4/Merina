@@ -43,7 +43,7 @@
                 .repeat_user,
                 .total_revenu {
                     background-color: white;
-                    padding: 1.1875rem 2.625rem 1.1875rem 2.1875rem;
+                    padding: 1.1875rem 2.1875rem;
                     box-shadow: 2px 3px 0px 0px #e8e9ff;
                     border-radius: 1.25rem;
                     display: flex;
@@ -233,6 +233,13 @@
                             text-decoration-thickness: 2px;
                         }
                     }
+
+                    .data_table {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-end;
+                        align-items: end;
+                    }
                 }
 
                 .recent_activities {
@@ -281,6 +288,7 @@
                                 font-style: normal;
                                 font-weight: 700;
                                 line-height: 1.25rem;
+                                padding: 0.55rem 0rem;
                             }
 
                             .activities_box_text {
@@ -311,6 +319,7 @@
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
+                    align-items: center;
                     background-color: #e8e9ff;
                     gap: 2rem;
 
@@ -318,7 +327,7 @@
                         display: flex;
                         justify-content: space-between;
                         align-items: center;
-                        margin-bottom: 1rem;
+                        width: 100%;
                     }
 
                     .users_box {
@@ -326,7 +335,7 @@
                         flex-direction: row;
                         justify-content: space-between;
                         align-items: center;
-                        gap: 7rem;
+                        gap: 4rem;
 
                         .users {
                             display: flex;

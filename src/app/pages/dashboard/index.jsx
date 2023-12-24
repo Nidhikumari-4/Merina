@@ -158,17 +158,17 @@ const Dashboard = () => {
     { field: "storyviews", header: "Story Views" },
     { field: "paywallclicks", header: "Paywall Clicks" },
     { field: "purchase", header: "Purchase Amount" },
+    { field: "read", header: "Read" },
   ];
 
-  const formattedArticleData = apiData?.ArticleTable?.slice(0, 4).map(
-    (article) => ({
-      title: article.Title,
-      slug: article.slug,
-      storyviews: article.StoryViews,
-      paywallclicks: article.PaywallClicks,
-      purchase: article.PurchaseAmount,
-    })
-  );
+  const formattedArticleData = apiData?.ArticleTable?.map((article) => ({
+    title: article.Title,
+    slug: article.slug,
+    storyviews: article.StoryViews,
+    paywallclicks: article.PaywallClicks,
+    purchase: article.PurchaseAmount,
+    read: <Image src="/send-sqaure-2.svg" alt="" />,
+  }));
 
   const topUsers = [
     {
@@ -212,7 +212,7 @@ const Dashboard = () => {
       time: "11:20",
       user: "New User",
       name: "Erik Pittman",
-      heading: "",
+      heading: "Add New Post First Post»",
       text: "You might remember the Dell computer commercials in which a youth reports this exciting news to his friends that they are about to get their new computer.",
     },
     {
@@ -422,8 +422,15 @@ const Dashboard = () => {
                 <p>Popular Articles</p>
                 <p>Tranding Articles</p>
               </span>
-              <span className="data_table">
-                <DataTable value={formattedArticleData}>
+              <span>
+                <DataTable
+                  value={formattedArticleData}
+                  paginator
+                  rows={4}
+                  paginatorTemplate="FirstPageLink PrevPageLink CurrentPageReport NextPageLink LastPageLink RowsPerPageDropdown"
+                  tableStyle={{ minWidth: "50rem" }}
+                  className="data_table"
+                >
                   {articleColumns.map((column, index) => (
                     <Column
                       key={index}
